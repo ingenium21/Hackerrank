@@ -11,7 +11,7 @@
 # 2
 
 #notes:
-# how am I going to make it iterate through the array looking for all possible geo progresses...
+#I hated this one so much
 ################################
 #!/bin/python3
 
