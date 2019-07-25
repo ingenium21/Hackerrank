@@ -29,7 +29,6 @@ import sys
 
 # Complete the maximumToys function below.
 def maximumToys(prices, k):
-    moneyLeft = k
     count = 0
     prices.sort()
         
