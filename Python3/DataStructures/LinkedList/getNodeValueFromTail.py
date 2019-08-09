@@ -38,14 +38,6 @@ def print_singly_linked_list(node, sep, fptr):
 
 # Complete the getNode function below.
 
-#
-# For your reference:
-#
-# SinglyLinkedListNode:
-#     int data
-#     SinglyLinkedListNode next
-#
-#
 def getNode(head, positionFromTail):
     #initialize two pointers
     p = head
