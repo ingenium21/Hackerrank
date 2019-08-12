@@ -79,7 +79,29 @@ def findMergeNode(head1, head2):
         smaller = smaller.next
     
     return larger.data
-    
+
+# this is a better solution that is O(N) without the use of counters
+def findMergeNodeFaster(head1, head2):
+    p = head1
+    q = head2
+
+    #next node until p = q
+    while(p != q):
+        # if you reached the end of one list start at the beginning of the other one.
+        # p
+        if (p.next is None):
+            p = head2
+        else:
+            p = p.next
+        
+        #q
+        if (q.next is None):
+            q = head1
+        else:
+            q = q.next
+        
+    return q.data
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
@@ -105,8 +127,8 @@ if __name__ == '__main__':
             llist2_item = int(input())
             llist2.insert_node(llist2_item)
             
-        ptr1 = llist1.head;
-        ptr2 = llist2.head;
+        ptr1 = llist1.head
+        ptr2 = llist2.head
 
         for i in range(llist1_count):
             if i < index:
