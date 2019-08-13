@@ -40,15 +40,6 @@ def print_doubly_linked_list(node, sep, fptr):
 
 # Complete the sortedInsert function below.
 
-#
-# For your reference:
-#
-# DoublyLinkedListNode:
-#     int data
-#     DoublyLinkedListNode next
-#     DoublyLinkedListNode prev
-#
-#
 def sortedInsert(head, data):
     temp=DoublyLinkedListNode(data)
     if head==None: 
