@@ -40,26 +40,31 @@ self.left (the left child of the node)
 self.right (the right child of the node)
 self.info (the value of the node)
 """
-def levelOrder(root):
-    #if root is empty return
-    if root is None:
-        return
-    #create a "queue" array
-    q = [(root)]
-    while(len(q) >0):
-        #while the queue is not empty we will print the contents of the first value
-        print(q[0], end=" ")
-        #then pop it out into variable "x"
-        x = q.pop(0)
-        if x.left:
-        #since level order goes from left to right, we check to make sure x.left exists
-        #first and then append it to the queue then we do the same to x.right
-        #if either side is not empty, the while loop will continue printing values until 
-        #we reach null
-            q.append(x.left)
-        if x.right:
-            q.append(x.right)
-        
+
+def topView(root):
+    cur = [(root, 0)]
+    scores = {} #create a dict for scores
+
+    while cur:
+        #while cur is not empty
+        for _ in range(len(cur)):
+            node, score = cur.pop(0)
+            #we pop out the first element into two seperate variables
+            if not node:
+                continue
+            #ignore empty nodes
+            if score not in scores:
+                scores[score] = node.info
+            #we are adding the score into the dictionary, since we only want the top view, the first node that has that score has to be shown.
+            #any other nodes that have the same score are "under" the top
+            #think an umbrella, top view only sees the top part of the umbrella
+            cur.extend(
+                [(node.left, score - 1),
+                (node.right, score + 1)]
+            )
+    #sort the scores and print their values
+    for _, value in sorted(list(scores.items())):
+        print(value, end=" ")
 
 
 tree = BinarySearchTree()
@@ -70,4 +75,4 @@ arr = list(map(int, input().split()))
 for i in range(t):
     tree.create(arr[i])
 
-levelOrder(tree.root)
+topView(tree.root)
