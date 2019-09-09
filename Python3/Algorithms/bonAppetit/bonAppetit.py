@@ -7,6 +7,7 @@ import re
 import sys
 
 # Complete the bonAppetit function below.
+#pretty self explanatory
 def bonAppetit(bill, k, b):
     actual = (sum(bill) - bill[k])/2
     if b == actual:
