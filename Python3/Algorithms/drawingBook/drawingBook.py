@@ -10,7 +10,8 @@ def pageCount(n, p):
     #ugh I'm so mad, but an much simpler solution is to do the following
     # return min(p//2, n//2 - p//2)
     # the reason this works is because since every page turn is two pages, you can get the front by dividing p by 2
-    # and the back count by n/2 - p/2 
+    # you can get the total number of page turns by n/2
+    # so from the back you just subtract total page turns - page turns
     # then use the min() function to return the smallest number
     # This is why it pays to remember what you learned in math class, kids
     # tip: in python // is dividing and returning whole integers
