@@ -15,6 +15,8 @@ def pageCount(n, p):
     # then use the min() function to return the smallest number
     # This is why it pays to remember what you learned in math class, kids
     # tip: in python // is dividing and returning whole integers
+    ###################################################################################
+    #my crappy inefficient solution
     rightPage = 1 #first page will always be the right page
     leftPage = 0
     startTurns = 0
