@@ -12,6 +12,7 @@ def pageCount(n, p):
     # the reason this works is because since every page turn is two pages, you can get the front by dividing p by 2
     # and the back count by n/2 - p/2 
     # then use the min() function to return the smallest number
+    # This is why it pays to remember what you learned in math class, kids
     # tip: in python // is dividing and returning whole integers
     rightPage = 1 #first page will always be the right page
     leftPage = 0
