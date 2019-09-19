@@ -10,7 +10,7 @@ import sys
 def viralAdvertising(n):
     recipients = 5
     cumulative = 0
-    for i in range(1,n+1):
+    for _ in range(1,n+1):
         liked = recipients // 2
         recipients = liked * 3
         cumulative += liked
