@@ -31,6 +31,21 @@ def workbook(n, k, arr):
 
     return count
 
+    #a cleaner solution:
+    # count = 0
+    # pageNum = 0
+    # for i in range(len(arr)):
+    #     pageNum += 1
+    #     problem = 0
+    #     for j in range(0,arr[i]):
+    #         problem += 1
+    #         if problem == pageNum:
+    #             count += 1
+    #         if problem % k == 0 and problem != arr[i]:
+    #             pageNum += 1
+    # return count
+
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
