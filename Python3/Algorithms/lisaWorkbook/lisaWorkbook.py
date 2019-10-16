@@ -16,7 +16,7 @@ def workbook(n, k, arr):
         pageNum += 1 #starting at page 1
         problem = 0 #we declare variables for each problem number and it's index, the index will be useful bc we don't exactly know how many problems are in each page (k)
         probIndex = 0
-        for j in range(0,arr[i]): #second loop that counts from 0 to arr[i], we don't need to worry about starting at 1, but if you prefer that, make sure you also +1 the second range
+        for _ in range(0,arr[i]): #second loop that counts from 0 to arr[i], we don't need to worry about starting at 1, but if you prefer that, make sure you also +1 the second range
             problem += 1 #adds one to the problem number
             probIndex += 1 #adds one tot he index
             if problem == pageNum:
