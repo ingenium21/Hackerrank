@@ -18,8 +18,8 @@ def hackerrankInString(s):
             string = string[1:]    
         if len(string) == 0:
             return "YES"
-    else:
-        return "NO"
+
+    return "NO"
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
