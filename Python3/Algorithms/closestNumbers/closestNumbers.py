@@ -12,8 +12,7 @@ def closestNumbers(arr):
     minPairs = []
     smallestDiff = 0
     currentDiff = 0
-    ind = 0
-
+    
     for i in range(len(arr) - 1):
         currentDiff = abs(arr[i+1] - arr[i])
         if smallestDiff == 0:
